@@ -1,6 +1,6 @@
-# Vertex AI Systems
+# Nexalist AI
 
-Vertex AI Systems is a high-end, professional landing page for an AI consultancy firm specializing in **Strategic Planning** and **Corporate Training**. The application is designed to communicate the value of AI implementation to C-suite executives and SMEs.
+Nexalist AI is a high-end, professional landing page for an AI consultancy firm specializing in **Strategic Planning** and **Corporate Training**. The application is designed to communicate the value of AI implementation to C-suite executives and SMEs.
 
 ## ✨ Features
 
@@ -29,7 +29,7 @@ Vertex AI Systems is a high-end, professional landing page for an AI consultancy
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd vertexai
+   cd nexalist-ai
    ```
 
 2. Install dependencies:

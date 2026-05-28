@@ -1,7 +1,7 @@
-# Vertex AI Systems Web App
+# Nexalist AI Web App
 
 ## Project Overview
-This project is a high-end, professional landing page for **Vertex AI Systems**, an AI consultancy firm specializing in **Strategic Planning** and **Corporate Training**. The application is designed to communicate the value of AI implementation to C-suite executives and SMEs, featuring a "Modern Tech Dark" aesthetic with glassmorphism, gradient accents, and a focus on high-ticket service delivery.
+This project is a high-end, professional landing page for **Nexalist AI**, an AI consultancy firm specializing in **Strategic Planning** and **Corporate Training**. The application is designed to communicate the value of AI implementation to C-suite executives and SMEs, featuring a "Modern Tech Dark" aesthetic with glassmorphism, gradient accents, and a focus on high-ticket service delivery.
 
 ### Main Technologies
 - **Framework:** React 19 (TypeScript)
@@ -63,7 +63,7 @@ npm run lint
 - Use the `lucide-react` library for consistent, high-quality iconography.
 - Default icon size for section headers is typically `40`, and `32` for benefit cards.
 
-### Branding
-- The company name is **Vertex AI Systems**.
+- ### Branding
+- The company name is **Nexalist AI**.
 - The primary brand colors are **Electric Cyan (#22d3ee)** and **Royal Purple (#8b5cf6)**.
 - The tone of the copy should be professional, authoritative, and strategic.

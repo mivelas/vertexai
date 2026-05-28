@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="glass-card success-card">
             <CheckCircle size={64} className="success-icon" />
             <h2>Strategy Session Booked!</h2>
-            <p>Thank you for reaching out to Vertex AI Systems. We'll be in touch within 24 hours to schedule your discovery call.</p>
+            <p>Thank you for reaching out to Nexalist AI. We'll be in touch within 24 hours to schedule your discovery call.</p>
             <button onClick={() => setFormState('idle')} className="btn btn-primary">Send Another Message</button>
           </div>
         </div>
@@ -35,12 +35,12 @@ const Contact = () => {
         <div className="contact-info">
           <h2 className="section-title">Ready to <span className="gradient-text">Evolve?</span></h2>
           <p className="contact-text">
-            Schedule a confidential discovery call with the Vertex team to discuss your business goals and AI roadmap.
+            Schedule a confidential discovery call with the Nexalist team to discuss your business goals and AI roadmap.
           </p>
           <div className="contact-details">
             <div className="contact-detail-item">
               <span className="detail-label">Email</span>
-              <span className="detail-value">hello@vertexai.systems</span>
+              <span className="detail-value">hello@nexalist.ai</span>
             </div>
             <div className="contact-detail-item">
               <span className="detail-label">Inquiries</span>

@@ -21,13 +21,13 @@ const Footer = () => {
             <div className="footer-link-group">
               <h4>Connect</h4>
               <a href="#contact">Contact</a>
-              <a href="mailto:hello@vertexai.systems">Email Us</a>
+              <a href="mailto:hello@nexalist.ai">Email Us</a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Vertex AI Systems. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nexalist AI. All rights reserved.</p>
         </div>
       </div>
     </footer>
