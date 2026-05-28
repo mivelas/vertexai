@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <Logo size={24} />
+            <Logo size={36} />
             <p className="footer-tagline">Architecting the future of enterprise intelligence. Expert AI consultancy for high-stakes industries.</p>
           </div>
           

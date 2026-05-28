@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#" className="logo-link">
-          <Logo size={28} />
+          <Logo size={48} />
         </a>
 
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nexalist-ai.com/sitemap.xml
+
+# Block search engines from indexing admin or private pages
+Disallow: /admin
+Disallow: /private
+
+# Allow specific search engines if needed
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
