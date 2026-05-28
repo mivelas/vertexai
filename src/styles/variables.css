@@ -1,0 +1,30 @@
+:root {
+  /* Colors - Modern Tech Dark */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.6);
+  
+  --accent-cyan: #22d3ee;
+  --accent-purple: #8b5cf6;
+  --accent-cyan-glow: rgba(34, 211, 238, 0.3);
+  
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --text-accent: #22d3ee;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Misc */
+  --border-radius: 12px;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --max-width: 1200px;
+}
