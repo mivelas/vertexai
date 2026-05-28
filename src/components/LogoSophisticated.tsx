@@ -1,13 +1,11 @@
-import React from 'react';
-
 import React from 'react'
 
-interface LogoProps {
+interface Props {
   size?: number
   showText?: boolean
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 44, showText = true }) => {
+const LogoSophisticated: React.FC<Props> = ({ size = 44, showText = true }) => {
   const s = size
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -21,12 +19,12 @@ const Logo: React.FC<LogoProps> = ({ size = 44, showText = true }) => {
         aria-label="Nexalist AI logo"
       >
         <defs>
-          <linearGradient id="nsGradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="nsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#00d4ff" />
             <stop offset="50%" stopColor="#7c4dff" />
             <stop offset="100%" stopColor="#ff7ab6" />
           </linearGradient>
-          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="3" result="b" />
             <feMerge>
               <feMergeNode in="b" />
@@ -35,10 +33,12 @@ const Logo: React.FC<LogoProps> = ({ size = 44, showText = true }) => {
           </filter>
         </defs>
 
+        {/* Outer ring */}
         <circle cx="50" cy="50" r="44" fill="#071027" />
 
-        <g filter="url(#softGlow)">
-          <path d="M30 64 C40 52, 60 52, 70 40" stroke="url(#nsGradMain)" strokeWidth="3.8" strokeLinecap="round" fill="none" />
+        {/* Neural network motif: nodes and connecting arcs */}
+        <g filter="url(#soft)">
+          <path d="M30 64 C40 52, 60 52, 70 40" stroke="url(#nsGrad)" strokeWidth="3.8" strokeLinecap="round" fill="none" />
           <path d="M30 36 C42 44, 58 44, 70 56" stroke="#2b3350" strokeWidth="1.2" strokeLinecap="round" fill="none" />
 
           <circle cx="28" cy="64" r="4.1" fill="#00d4ff" />
@@ -47,7 +47,8 @@ const Logo: React.FC<LogoProps> = ({ size = 44, showText = true }) => {
           <circle cx="72" cy="40" r="4.1" fill="#00d4ff" />
           <circle cx="72" cy="56" r="4.1" fill="#7c4dff" />
 
-          <rect x="40" y="34" width="20" height="32" rx="6" fill="url(#nsGradMain)" opacity="0.12" />
+          {/* small AI glyph in center */}
+          <rect x="40" y="34" width="20" height="32" rx="6" fill="url(#nsGrad)" opacity="0.12" />
           <text x="50" y="58" textAnchor="middle" fontWeight={700} fontSize={12} fill="#dff6ff">AI</text>
         </g>
       </svg>
@@ -62,4 +63,4 @@ const Logo: React.FC<LogoProps> = ({ size = 44, showText = true }) => {
   )
 }
 
-export default Logo
+export default LogoSophisticated
