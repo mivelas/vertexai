@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
-
+  const [result, setResult] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
@@ -14,7 +14,26 @@ const Contact = () => {
     }, 1500);
   };
 
-  if (formState === 'success') {
+  
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "78013d37-a48f-4258-a681-3d02cf30e4f6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
     return (
       <section id="contact" className="contact section-padding">
         <div className="container">
@@ -27,7 +46,9 @@ const Contact = () => {
         </div>
       </section>
     );
-  }
+    
+  };
+
 
   return (
     <section id="contact" className="contact section-padding">
@@ -40,28 +61,28 @@ const Contact = () => {
           <div className="contact-details">
             <div className="contact-detail-item">
               <span className="detail-label">Email</span>
-              <span className="detail-value">hello@nexalist.ai</span>
+              <span className="detail-value">info@nexalistai.com</span>
             </div>
             <div className="contact-detail-item">
               <span className="detail-label">Inquiries</span>
-              <span className="detail-value">San Francisco • London • Remote</span>
+              <span className="detail-value">SW Florida • Remote</span>
             </div>
           </div>
         </div>
 
         <div className="glass-card contact-form-card">
-          <form onSubmit={handleSubmit} className="contact-form">
+          <form onSubmit={onSubmit} className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" required placeholder="John Doe" />
+              <input type="text" id="name" name="name" required placeholder="Your Name" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Work Email</label>
-              <input type="email" id="email" required placeholder="john@company.com" />
+              <input type="email" id="email" name="email" required placeholder="your.email@company.com" />
             </div>
             <div className="form-group">
               <label htmlFor="service">Service of Interest</label>
-              <select id="service" required>
+              <select id="service" name="service" required>
                 <option value="">Select a service...</option>
                 <option value="strategy">AI Strategic Planning</option>
                 <option value="training">Corporate Training</option>
@@ -71,11 +92,12 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="message">Message (Optional)</label>
-              <textarea id="message" rows={4} placeholder="Tell us about your organization's AI objectives..."></textarea>
+              <textarea id="message" name="message" rows={4} placeholder="Tell us about your organization's AI objectives..."></textarea>
             </div>
             <button type="submit" className="btn btn-primary form-submit" disabled={formState === 'submitting'}>
               {formState === 'submitting' ? 'Sending...' : <>Send Message <Send size={18} /></>}
             </button>
+            <span>{result}</span>
           </form>
         </div>
       </div>

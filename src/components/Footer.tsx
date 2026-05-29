@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="footer-link-group">
               <h4>Connect</h4>
               <a href="#contact">Contact</a>
-              <a href="mailto:hello@nexalist.ai">Email Us</a>
+              <a href="mailto:info@nexalistai.com">Email Us</a>
             </div>
           </div>
         </div>
