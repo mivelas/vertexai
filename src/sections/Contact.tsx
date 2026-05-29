@@ -5,7 +5,7 @@ import './Contact.css';
 const Contact = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [result, setResult] = useState("");
-
+// @ts-ignore
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
