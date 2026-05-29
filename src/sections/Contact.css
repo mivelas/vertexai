@@ -67,10 +67,35 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 12px 12px 12px;
   color: var(--text-main);
   font-family: inherit;
   transition: var(--transition-fast);
+}
+
+.form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(15, 23, 42, 0.75);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-main) 50%),
+    linear-gradient(135deg, var(--text-main) 50%, transparent 50%);
+  background-position: calc(100% - 1rem) 50%, calc(100% - 0.6rem) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-group select option {
+  color: var(--text-main);
+  background-color: rgba(2, 6, 23, 1);
+}
+
+.form-group select option[value=""] {
+  color: var(--text-dim);
 }
 
 .form-group input:focus,
