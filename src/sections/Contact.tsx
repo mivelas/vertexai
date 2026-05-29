@@ -5,16 +5,6 @@ import './Contact.css';
 const Contact = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [result, setResult] = useState("");
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormState('submitting');
-    // Simulate API call
-    setTimeout(() => {
-      setFormState('success');
-    }, 1500);
-  };
-
-  
 
   const onSubmit = async (event) => {
     event.preventDefault();
