@@ -4,27 +4,27 @@ import './Services.css';
 const services = [
   {
     icon: <Compass size={40} />,
-    title: "AI Strategic Planning",
-    description: "We work with your leadership team to craft a 12-36 month AI adoption roadmap tailored to your industry, goals, and culture.",
-    features: ["Risk assessment", "ROI projections", "Governance frameworks"]
+    title: "AI Growth Roadmap",
+    description: "We work with you to craft a clear, actionable AI adoption plan tailored to your business goals and immediate operational needs.",
+    features: ["Quick-win identification", "Measurable ROI", "Growth-focused planning"]
   },
   {
     icon: <GraduationCap size={40} />,
-    title: "Executive & Corporate Training",
-    description: "Upskill your workforce with hands-on workshops covering prompt engineering, AI ethics, and tool-specific mastery.",
-    features: ["Customized curriculum", "Hands-on labs", "AI literacy audits"]
+    title: "Team AI Training",
+    description: "Upskill your workforce with hands-on, practical workshops covering prompt engineering and AI tools to save time daily.",
+    features: ["Practical skill-building", "Time-saving workshops", "AI literacy basics"]
   },
   {
     icon: <Search size={40} />,
-    title: "AI Readiness Audit",
-    description: "A deep dive into your data infrastructure, existing workflows, and tech stack to identify high-impact AI opportunities.",
-    features: ["Data quality review", "Silo identification", "Vendor evaluation"]
+    title: "Quick-Start AI Efficiency Check",
+    description: "A focused assessment of your current workflows to identify the highest-impact area for immediate AI automation.",
+    features: ["Workflow optimization", "Automation potential", "Integration readiness"]
   },
   {
     icon: <Cpu size={40} />,
-    title: "Custom Solution Design",
-    description: "Architecting bespoke AI systems—from RAG-enhanced LLMs to predictive ML pipelines—that integrate with your legacy tools.",
-    features: ["API integration", "Model fine-tuning", "Scalable architecture"]
+    title: "Lightweight Solution Design",
+    description: "Architecting bespoke AI systems that integrate seamlessly with your existing tools, ensuring minimal disruption.",
+    features: ["Seamless integration", "Existing stack compatibility", "Scalable design"]
   }
 ];
 
@@ -35,7 +35,7 @@ const Services = () => {
         <div className="section-header">
           <h2 className="section-title">Our <span className="gradient-text">Expertise</span></h2>
           <p className="section-subtitle">
-            Specialized consultancy services designed to take you from AI curiosity to market leadership.
+            Accessible AI consultancy services designed to scale your business quickly and efficiently.
           </p>
         </div>
 

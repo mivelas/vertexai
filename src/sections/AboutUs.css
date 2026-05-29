@@ -1,0 +1,39 @@
+.about-us {
+  background: var(--bg-primary);
+}
+
+.about-content {
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.about-description {
+  color: var(--text-dim);
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin: var(--space-md) auto;
+  line-height: 1.7;
+}
+
+.industry-focus h3 {
+  margin-bottom: var(--space-md);
+  color: var(--text-main);
+}
+
+.industry-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.industry-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+}

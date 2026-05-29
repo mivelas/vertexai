@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import Benefits from './sections/Benefits';
+import AboutUs from './sections/AboutUs';
 import Services from './sections/Services';
 import Roadmap from './sections/Roadmap';
 import Contact from './sections/Contact';
@@ -17,6 +18,7 @@ function App() {
         <Services />
         <Roadmap />
         <Contact />
+        <AboutUs />
       </main>
       <Footer />
     </div>

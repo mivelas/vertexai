@@ -9,14 +9,14 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Nexalist AI • Enterprise Intelligence
+            Nexalist AI • Accessible AI for Growth
           </div>
           <h1 className="hero-title">
-            Future-Proof Your Business with <span className="gradient-text">Nexalist AI</span>
+            Accessible AI Solutions to <span className="gradient-text">Scale Your Business Faster</span>
           </h1>
           <p className="hero-subtitle">
-            Nexalist AI bridges the gap between cutting-edge technology and your corporate goals.
-            We provide the strategic oversight and custom architecture needed to lead in the age of intelligence.
+            We bring enterprise-grade AI efficiency to your growing business. 
+            Get actionable, measurable results and actionable strategic insight without the enterprise-level complexity.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">
