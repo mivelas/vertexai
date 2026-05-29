@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './AboutUs.css';
 import { Building2, TrendingUp, Users } from 'lucide-react';
 
