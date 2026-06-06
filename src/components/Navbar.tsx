@@ -28,6 +28,7 @@ const Navbar = () => {
           <a href="#benefits" onClick={() => setIsMobileMenuOpen(false)}>Benefits</a>
           <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
           <a href="#roadmap" onClick={() => setIsMobileMenuOpen(false)}>Roadmap</a>
+          <a href="#roi-calculator" onClick={() => setIsMobileMenuOpen(false)}>ROI</a>
           <a href="#contact" className="cta-button-small" onClick={() => setIsMobileMenuOpen(false)}>
             Get Started
           </a>

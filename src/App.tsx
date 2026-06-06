@@ -6,6 +6,7 @@ import Benefits from './sections/Benefits';
 import AboutUs from './sections/AboutUs';
 import Services from './sections/Services';
 import Roadmap from './sections/Roadmap';
+import ROICalculator from './sections/ROICalculator';
 import Contact from './sections/Contact';
 import './styles/global.css';
 
@@ -32,6 +33,7 @@ function App() {
         <Benefits />
         <Services />
         <Roadmap />
+        <ROICalculator />
         <Contact />
         <AboutUs />
       </main>
