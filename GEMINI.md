@@ -67,3 +67,40 @@ npm run lint
 - The company name is **Nexalist AI**.
 - The primary brand colors are **Electric Cyan (#22d3ee)** and **Royal Purple (#8b5cf6)**.
 - The tone of the copy should be professional, authoritative, and strategic.
+
+---
+
+## Roadmap & Improvement Plan
+
+This roadmap outlines the strategic evolution of Nexalist AI, focusing on technical excellence, user engagement, and business growth.
+
+### Phase 1: Foundation & Polish (Technical Excellence)
+- **Testing Suite:**
+  - Implement **Vitest** for unit and component testing.
+  - Integrate **Playwright** for E2E testing, specifically focusing on the contact form and navigation flows.
+- **Enhanced Aesthetics:**
+  - Integrate **Framer Motion** for sophisticated, high-end animations (scroll-triggered reveals, smooth transitions).
+  - Optimize all image assets and implement lazy loading to maintain a sub-second TTI (Time to Interactive).
+- **SEO & Meta Management:**
+  - Use `react-helmet-async` to manage dynamic meta tags and improve search engine visibility.
+  - Implement a `sitemap.xml` and `robots.txt` strategy.
+
+### Phase 2: Engagement & Conversion (Business Growth)
+- **Interactive ROI Calculator:**
+  - Develop a lead-generation tool that allows potential clients to estimate the impact of AI on their specific business metrics (e.g., efficiency gains, cost reduction).
+- **Social Proof & Credibility:**
+  - Add a "Client Testimonials" section featuring quotes from high-level executives.
+  - Implement a "Trusted By" logo ticker showcasing partner companies and past clients.
+- **Advanced Form Handling:**
+  - Refactor the Contact section with `react-hook-form` and `zod` for real-time validation and a more professional user experience.
+
+### Phase 3: Authority & Growth (Market Leadership)
+- **AI Insights (Blog):**
+  - Launch a content hub for deep-dive articles on AI strategy, corporate training, and industry trends to establish Nexalist AI as a thought leader.
+- **Case Studies / Portfolio:**
+  - Create detailed breakdown pages for past projects, focusing on the "Problem, Solution, and Outcome (ROI)" framework.
+- **Lead Magnets:**
+  - Offer gated content (e.g., "The 2024 C-Suite AI Strategy Playbook") to capture high-intent leads and build an email list.
+- **Internationalization (i18n):**
+  - Implement `react-i18next` to support multiple languages, targeting global markets and international SMEs.
+
