@@ -1,16 +1,16 @@
 :root {
-  /* Colors - Warm Coastal */
-  --bg-primary: #1e293b;
-  --bg-secondary: #334155;
-  --bg-card: rgba(30, 41, 59, 0.8);
+  /* Colors - Modern Tech Dark */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.6);
   
-  --accent-cyan: #fbbf24;
-  --accent-purple: #e11d48;
-  --accent-cyan-glow: rgba(251, 191, 36, 0.3);
+  --accent-cyan: #22d3ee;
+  --accent-purple: #8b5cf6;
+  --accent-cyan-glow: rgba(34, 211, 238, 0.3);
   
-  --text-main: #f1f5f9;
-  --text-dim: #cbd5e1;
-  --text-accent: #fbbf24;
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --text-accent: #22d3ee;
 
   /* Spacing */
   --space-xs: 0.5rem;
