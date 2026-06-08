@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexalist-ai.com/sitemap.xml
+Sitemap: https://nexalistai.com/sitemap.xml
 
 # Block search engines from indexing admin or private pages
 Disallow: /admin
