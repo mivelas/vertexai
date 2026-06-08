@@ -396,11 +396,6 @@ export const blogPosts: BlogPost[] = [
 
   </article>
 
-  <div class="cta-box">
-    <h2>Found this useful?</h2>
-    <p>Subscribe to get more no-fluff guides on building a solo business with AI — new posts every week.</p>
-    <a href="#" class="cta-btn">Subscribe for free →</a>
-  </div>
     `
   }
 ];
