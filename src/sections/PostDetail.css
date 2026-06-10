@@ -22,48 +22,50 @@
   font-family: var(--sans);
 }
 
-.blog-post-template .hero {
+.blog-hero {
   background: #000;
-  padding: 2.5rem 2rem 2rem;
+  padding: 10rem 1rem 1rem;
   text-align: center;
   position: relative;
   border-bottom: 1px solid var(--border);
+  display: block; /* Explicit override if it was flex */
 }
 
 .blog-post-template .hero-eyebrow {
   display: inline-block;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
   border: 1px solid var(--accent);
-  padding: 4px 12px;
+  padding: 2px 8px;
   border-radius: 30px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.blog-post-template .hero h1 {
+.blog-post-template .blog-hero h1 {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
   font-weight: 400;
   line-height: 1.2;
-  max-width: 850px;
-  margin: 0 auto 0.75rem;
+  max-width: 650px;
+  margin: 0 auto 0.5rem;
   color: #fff;
 }
 
-.blog-post-template .hero h1 em {
+.blog-post-template .blog-hero h1 em {
   font-style: italic;
   color: var(--accent);
 }
 
 .blog-post-template .hero-sub {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--ink-secondary);
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+  max-width: 500px;
+  margin: 0 auto 0.75rem;
   font-weight: 300;
+  line-height: 1.4;
 }
 
 
@@ -71,15 +73,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 13px;
+  gap: 1.2rem;
+  font-size: 12px;
   color: var(--ink-muted);
 }
 
 .blog-post-template .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .blog-post-template .back-button {
@@ -91,9 +93,9 @@
   color: var(--accent);
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* CONTENT STYLES */
@@ -350,7 +352,7 @@
 
 @media (max-width: 600px) {
   .blog-post-template .stat-strip { grid-template-columns: 1fr; }
-  .blog-post-template .hero { padding: 3.5rem 1rem 2.5rem; }
-  .blog-post-template .hero h1 { font-size: 1.8rem; }
+  .blog-post-template .hero { padding: 2rem 1rem 1.5rem; }
+  .blog-post-template .hero h1 { font-size: 1.5rem; }
   .blog-post-template .container { padding: 2rem 1rem; }
 }

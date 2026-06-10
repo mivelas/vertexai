@@ -39,7 +39,7 @@ const PostDetail: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <header className="hero">
+      <header className="blog-hero">
         <span className="hero-eyebrow">{post.category}</span>
         <h1>{post.title}</h1>
         <p className="hero-sub">{post.excerpt}</p>
