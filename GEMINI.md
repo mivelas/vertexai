@@ -103,4 +103,3 @@ This roadmap outlines the strategic evolution of Nexalist AI, focusing on techni
   - Offer gated content (e.g., "The 2024 C-Suite AI Strategy Playbook") to capture high-intent leads and build an email list.
 - **Internationalization (i18n):**
   - Implement `react-i18next` to support multiple languages, targeting global markets and international SMEs.
-

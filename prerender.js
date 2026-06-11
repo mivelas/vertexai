@@ -19,6 +19,16 @@ const blogPosts = [
     category: 'AI Tools Guide',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
     content: `<div class="post-content-html"><h1>Best AI Tools for Solo Founders in 2026</h1><p>The definitive guide to AI tools that help solo founders operate like a full team.</p></div>`
+  },
+  {
+    slug: 'chatgpt-vs-claude-solo-founders-2026',
+    title: 'ChatGPT vs Claude for Solo Founders in 2026: Which One Actually Saves You More Time?',
+    excerpt: 'ChatGPT vs Claude head-to-head for solo founders in 2026 — writing, coding, pricing, and which one you should pay for based on your actual workflow.',
+    author: 'Nexalist Editorial',
+    datePublished: '2026-06-11',
+    category: 'AI Tools Comparison',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
+    content: `<div class="post-content-html"><h1>ChatGPT vs Claude for Solo Founders in 2026: Which One Actually Saves You More Time?</h1><p>ChatGPT vs Claude head-to-head for solo founders in 2026 — writing, coding, pricing, and which one you should pay for based on your actual workflow.</p></div>`
   }
 ];
 
