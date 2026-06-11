@@ -8,9 +8,11 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'The definitive guide to AI tools that help solo founders operate like a full team — covering writing, building, automation, and customer support.',
     author: 'Nexalist Editorial',
     date: 'June 2026',
+    datePublished: '2026-06-01',
     category: 'AI Tools Guide',
     readTime: '12 min read',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+
     content: `
   <nav class="toc">
     <p class="toc-title">In this guide</p>

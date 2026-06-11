@@ -16,7 +16,7 @@ function App() {
         <Helmet>
           <title>Nexalist AI | Strategic Enterprise Intelligence & AI Consultancy</title>
           <meta name="description" content="Nexalist AI delivers enterprise-grade AI consultancy, strategic planning, and corporate training. Scale your business with actionable AI insights and strategic implementation." />
-          <link rel="canonical" href="https://nexalist-ai.com/" />
+          <link rel="canonical" href="https://nexalistai.com/" />
         </Helmet>
         
         <Navbar />

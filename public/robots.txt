@@ -1,15 +1,17 @@
 User-agent: *
 Allow: /
 
+# Sitemap location — used by all crawlers
 Sitemap: https://nexalistai.com/sitemap.xml
 
 # Block search engines from indexing admin or private pages
 Disallow: /admin
 Disallow: /private
 
-# Allow specific search engines if needed
+# Googlebot — explicit allow for blog routes
 User-agent: Googlebot
-Allow: /
+Allow: /blog/
+Allow: /blog
 
 User-agent: Bingbot
 Allow: /
