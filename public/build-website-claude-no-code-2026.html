@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)</title>
+<meta name="description" content="A step-by-step guide for non-technical people to design, build, and publish a real website using Claude — from your first prompt to a live, shareable link.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1a18;--ink-2:#4a4a46;--ink-3:#888780;
+  --bg:#fafaf8;--bg-alt:#f3f2ee;--border:rgba(26,26,24,.1);
+  --accent:#c96442;--accent-light:#faeee9;
+  --green:#0f6e56;--green-light:#e1f5ee;
+  --blue:#185fa5;--blue-light:#e6f1fb;
+  --amber:#ba7517;--amber-light:#faeeda;
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:17px;padding-bottom:6rem}
+
+.hero{background:var(--ink);color:#f3f2ee;padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px);pointer-events:none}
+.eyebrow{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#f0b39c;border:1px solid rgba(240,179,156,.35);padding:5px 14px;border-radius:20px;margin-bottom:1.5rem}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:400;line-height:1.18;max-width:800px;margin:0 auto 1.2rem;color:#fafaf8;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:#f0b39c}
+.hero-sub{font-size:1.05rem;color:rgba(243,242,238,.6);max-width:580px;margin:0 auto 2.5rem;font-weight:300}
+.hero-meta{display:flex;align-items:center;justify-content:center;gap:1.5rem;font-size:13px;color:rgba(243,242,238,.4)}
+
+.container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+
+.toc{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:1.75rem 2rem;margin:3rem 0 2.5rem}
+.toc-title{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1rem}
+.toc ol{padding-left:1.2rem;color:var(--ink-2);font-size:15px}
+.toc li{margin-bottom:.45rem}
+.toc a{color:var(--accent);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+.prose{padding-top:2.5rem}
+.prose h2{font-family:var(--serif);font-size:1.9rem;font-weight:400;line-height:1.25;margin:3rem 0 1rem;letter-spacing:-.01em}
+.prose h3{font-size:1.05rem;font-weight:500;margin:1.75rem 0 .6rem}
+.prose p{margin-bottom:1.2rem;color:var(--ink-2)}
+.prose p strong{color:var(--ink);font-weight:500}
+.prose a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(201,100,66,.35)}
+.lead{font-family:var(--serif);font-size:1.25rem;font-style:italic;line-height:1.6;color:var(--ink-2);border-left:3px solid var(--accent);padding:.75rem 1.5rem;margin:2rem 0 2.5rem}
+
+/* STEP CARD */
+.step{display:flex;gap:1.25rem;margin:2rem 0;border:1px solid var(--border);border-radius:14px;padding:1.75rem;background:#fff}
+.step-num{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.3rem;font-style:italic}
+.step-body{flex:1}
+.step-title{font-weight:500;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem}
+.step-text{font-size:15px;color:var(--ink-2);line-height:1.65}
+
+/* PROMPT BOX */
+.prompt-box{background:var(--ink);border-radius:10px;padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:'SF Mono',Consolas,monospace;font-size:13.5px;color:#e8e6e0;line-height:1.6;position:relative}
+.prompt-label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#f0b39c;margin-bottom:.6rem;display:block}
+
+/* PATH CARDS */
+.path-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:1.75rem 0}
+.path-card{border-radius:12px;padding:1.4rem;border:1px solid var(--border)}
+.path-1{background:var(--green-light);border-color:rgba(15,110,86,.25)}
+.path-2{background:var(--blue-light);border-color:rgba(24,95,165,.25)}
+.path-3{background:var(--amber-light);border-color:rgba(186,117,23,.25)}
+.path-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.path-1 .path-label{color:var(--green)}
+.path-2 .path-label{color:var(--blue)}
+.path-3 .path-label{color:var(--amber)}
+.path-title{font-weight:500;font-size:.95rem;margin-bottom:.5rem;color:var(--ink)}
+.path-desc{font-size:13px;color:var(--ink-2);line-height:1.55}
+
+/* CALLOUT */
+.callout{border-left:3px solid var(--green);background:var(--green-light);border-radius:0 10px 10px 0;padding:1.1rem 1.5rem;margin:2rem 0}
+.callout-title{font-size:12px;font-weight:500;color:var(--green);margin-bottom:5px;text-transform:uppercase;letter-spacing:.07em}
+.callout p{font-size:14.5px;color:#085041;margin:0}
+
+.callout-warn{border-left-color:var(--amber);background:var(--amber-light)}
+.callout-warn .callout-title{color:var(--amber)}
+.callout-warn p{color:#633806}
+
+.callout-info{border-left-color:var(--blue);background:var(--blue-light)}
+.callout-info .callout-title{color:var(--blue)}
+.callout-info p{color:#0d3e6e}
+
+/* CHECKLIST */
+.checklist{list-style:none;margin:1.5rem 0}
+.checklist li{padding:10px 0 10px 2rem;position:relative;font-size:15px;color:var(--ink-2);border-bottom:1px solid var(--border)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{content:'';position:absolute;left:0;top:13px;width:16px;height:16px;border:2px solid var(--accent);border-radius:4px}
+.checklist li strong{color:var(--ink)}
+
+/* COMPARISON TABLE */
+.comp-table{width:100%;border-collapse:collapse;font-size:14px;margin:1.5rem 0;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.comp-table th{background:var(--bg-alt);text-align:left;padding:10px 14px;font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--border)}
+.comp-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:var(--ink-2);vertical-align:top}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{font-weight:500;color:var(--ink)}
+
+.cat-header{display:flex;align-items:center;gap:.75rem;margin:3.5rem 0 .5rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+.cat-num{font-family:var(--serif);font-size:1.75rem;color:var(--accent);font-style:italic;line-height:1}
+.cat-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+.faq-item{border-bottom:1px solid var(--border);padding:1.5rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:500;color:var(--ink);margin-bottom:.6rem;font-size:1rem}
+.faq-a{font-size:15px;color:var(--ink-2);line-height:1.65}
+
+.cta-box{background:var(--ink);color:#fafaf8;border-radius:16px;padding:3rem 2.5rem;text-align:center;margin-top:4rem}
+.cta-box h2{font-family:var(--serif);font-size:1.8rem;font-weight:400;margin-bottom:.75rem;color:#fafaf8}
+.cta-box p{color:rgba(243,242,238,.6);font-size:15px;margin-bottom:1.75rem}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;font-size:14px;font-weight:500;padding:12px 28px;border-radius:8px;text-decoration:none;letter-spacing:.02em}
+
+@media(max-width:600px){
+  .path-grid{grid-template-columns:1fr}
+  .step{flex-direction:column}
+  .hero{padding:3.5rem 1.25rem 3rem}.hero h1{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="eyebrow">No-Code Guide · 2026</span>
+  <h1>How to Build and Publish a <em>Website</em> Using Claude</h1>
+  <p class="hero-sub">No coding background. No developer. No budget for an agency. Just a clear idea and Claude — here's the full path from blank page to live website.</p>
+  <div class="hero-meta">
+    <span>June 2026</span>
+    <span>·</span>
+    <span>14 min read</span>
+    <span>·</span>
+    <span>Beginner friendly</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <nav class="toc">
+    <p class="toc-title">In this guide</p>
+    <ol>
+      <li><a href="#why">Why Claude works for non-coders</a></li>
+      <li><a href="#prep">Before you start: 3 things to prepare</a></li>
+      <li><a href="#building">Step-by-step: building your website in Claude</a></li>
+      <li><a href="#preview">Previewing and editing your site</a></li>
+      <li><a href="#publish">Publishing your site for free with Claude</a></li>
+      <li><a href="#domain">Getting your own domain name (yourname.com)</a></li>
+      <li><a href="#paths">3 paths to a production-ready website</a></li>
+      <li><a href="#checklist">Pre-launch checklist</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <article class="prose">
+
+    <p class="lead">You don't need to learn to code to have a real website in 2026. You need to know how to describe what you want clearly — Claude handles the rest.</p>
+
+    <p>This guide walks through the entire process: turning an idea into a working website inside Claude, previewing and refining it, publishing it with a free shareable link, and — if you want it on your own domain — moving it to a real hosting platform. No jargon assumed. No prior experience needed.</p>
+
+    <section id="why">
+      <div class="cat-header">
+        <span class="cat-num">00</span>
+        <span class="cat-label">Why this works</span>
+      </div>
+      <h2>Why Claude works for non-coders</h2>
+
+      <p>Claude has a feature called <strong>Artifacts</strong> — when you ask it to build something like a website, it generates the actual code and shows you a live preview right next to the chat. You can see your site rendering in real time, and you don't need to understand a single line of the code behind it.</p>
+
+      <p>The part that matters most for non-technical people: you make changes by simply <strong>talking to Claude</strong>. "Make the heading bigger," "change the background to a soft blue," "add a contact form at the bottom" — you type it in plain English, and the website updates in front of you.</p>
+
+      <div class="callout callout-info">
+        <p class="callout-title">What you can build this way</p>
+        <p>Landing pages, portfolios, small business sites, personal sites, event pages, simple booking pages, newsletter signup pages, and basic multi-page sites. For anything needing user accounts, payments, or a database (like an online store with inventory), you'll eventually want a developer or a platform built for that — more on this in the "3 paths" section below.</p>
+      </div>
+    </section>
+
+    <section id="prep">
+      <div class="cat-header">
+        <span class="cat-num">01</span>
+        <span class="cat-label">Preparation</span>
+      </div>
+      <h2>Before you start: 3 things to prepare</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Know your website's one job</p>
+          <p class="step-text">Every good website has one primary goal: get an email signup, book a call, sell a product, show a portfolio. Decide this before you open Claude — it shapes everything else and gives Claude a clear target.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Gather your content first</p>
+          <p class="step-text">Have your business name, a short description of what you do, your contact info, and any text you want on the page ready in a notes file. Claude can write placeholder copy, but real content makes the result far more usable on day one.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Collect 2–3 reference sites you like</p>
+          <p class="step-text">You don't need design vocabulary. Just find a couple of websites whose look you like and describe what you like about them ("clean and minimal like this," "bold and colorful like that"). Claude can work from comparisons even without seeing the image directly — or you can paste a screenshot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="building">
+      <div class="cat-header">
+        <span class="cat-num">02</span>
+        <span class="cat-label">Building</span>
+      </div>
+      <h2>Step-by-step: building your website in Claude</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Open a new chat and describe your website</p>
+          <p class="step-text">Be specific about purpose, audience, and tone. The more detail you give upfront, the less back-and-forth editing you'll need later.</p>
+          <div class="prompt-box">
+            <span class="prompt-label">Example prompt</span>
+            Build me a one-page website for my freelance photography business. It should have: a hero section with my name "Maria Torres Photography" and tagline "Capturing real moments, naturally," a section showing 3 types of photography I offer (weddings, portraits, events), a short "about me" section, and a contact section with my email. Style: warm, minimal, earthy tones, elegant serif headings.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Let Claude generate the first version</p>
+          <p class="step-text">Claude will write the code and open a preview panel showing your website rendering live. This first version won't be perfect — treat it as a draft to react to, not a final product.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Refine it through conversation, one change at a time</p>
+          <p class="step-text">Reply in the same chat to make edits. The same website updates in place — you don't need to start over or copy anything.</p>
+          <div class="prompt-box">
+            <span class="prompt-label">Example follow-up prompts</span>
+            "Make the hero section taller and center the text vertically"<br>
+            "Change the color palette to terracotta and cream"<br>
+            "Add a fourth section with 3 client testimonials"<br>
+            "Make the contact button more prominent"
+          </div>
+          <p class="step-text">Make one or two changes per message rather than a long list — it's easier to review what changed and catch anything you don't like.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <p class="step-title">Check how it looks on mobile</p>
+          <p class="step-text">Most visitors will see your site on a phone first. Ask Claude directly: "make sure this looks good on mobile screens" — it will adjust the layout for smaller screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview">
+      <div class="cat-header">
+        <span class="cat-num">03</span>
+        <span class="cat-label">Reviewing</span>
+      </div>
+      <h2>Previewing and editing your site</h2>
+
+      <p>The artifact panel has two views: a <strong>Preview</strong> tab that shows your site exactly as a visitor would see it, and a <strong>Code</strong> tab that shows the underlying code. As a non-technical builder, you'll live almost entirely in Preview — the Code tab is there if you ever want a developer to take over later.</p>
+
+      <div class="callout">
+        <p class="callout-title">Pro tip</p>
+        <p>Every version of your site is saved as you iterate. If a change makes things worse, just tell Claude "undo that last change" or describe what you want reverted — you don't need to worry about losing earlier work.</p>
+      </div>
+    </section>
+
+    <section id="publish">
+      <div class="cat-header">
+        <span class="cat-num">04</span>
+        <span class="cat-label">Going live</span>
+      </div>
+      <h2>Publishing your site for free with Claude</h2>
+
+      <p>Once you're happy with how it looks, publishing takes one click — and it's available on every Claude plan, including the free plan.</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Click "Publish" on the artifact</p>
+          <p class="step-text">You'll find the Publish button at the top of the artifact panel. Click it to make your site publicly accessible.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Copy your public link</p>
+          <p class="step-text">Claude generates a shareable URL. Anyone with the link can view and interact with your site — they don't need a Claude account to see it.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Share it anywhere</p>
+          <p class="step-text">Put the link in your Instagram bio, send it to clients, post it on social media. If you want it embedded inside another website you already have, click "Get embed code" after publishing and add your website's domain to the allowed list.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <p class="callout-title">Good to know</p>
+        <p>A published Claude link works great for sharing and gathering feedback, but it lives on a claude.ai address rather than your own domain, and it isn't built for things like storing customer orders. If you want a permanent business website with your own domain name, continue to the next section.</p>
+      </div>
+    </section>
+
+    <section id="domain">
+      <div class="cat-header">
+        <span class="cat-num">05</span>
+        <span class="cat-label">Your own domain</span>
+      </div>
+      <h2>Getting your own domain name (yourname.com)</h2>
+
+      <p>If you want visitors to reach your site at a custom address like "mariaphotography.com" instead of a claude.ai link, you'll move your finished design onto a hosting platform. The good news: you've already done the hard part — designing and writing the site. This step is just giving it a permanent home.</p>
+
+      <p>The simplest non-technical route: copy the code from Claude's Code tab and paste it into a beginner-friendly hosting platform built for exactly this handoff (several exist specifically for moving AI-generated sites live with a visual editor, no code required). You'll register your domain name there too, usually for $10–20/year.</p>
+    </section>
+
+    <section id="paths">
+      <h2>3 paths to a production-ready website</h2>
+      <p>Which path makes sense depends on how technical you are and how complex your site needs to be.</p>
+
+      <div class="path-grid">
+        <div class="path-card path-1">
+          <p class="path-label">Path 1</p>
+          <p class="path-title">Stay on the published link</p>
+          <p class="path-desc">Best for: portfolios, quick landing pages, testing an idea. Free, instant, zero setup. No custom domain.</p>
+        </div>
+        <div class="path-card path-2">
+          <p class="path-label">Path 2</p>
+          <p class="path-title">Move to a no-code hosting platform</p>
+          <p class="path-desc">Best for: small business sites, anyone non-technical wanting a real domain. Import your Claude code, get a visual editor, custom domain, and SEO settings without touching code.</p>
+        </div>
+        <div class="path-card path-3">
+          <p class="path-label">Path 3</p>
+          <p class="path-title">Hand off to a developer</p>
+          <p class="path-desc">Best for: sites needing logins, payments, or a database. Give a developer your Claude code and design as the starting brief — saves them significant time.</p>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Need</th><th>Best path</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Just want to share something today</td><td>Path 1 — Published Claude link</td></tr>
+          <tr><td>Want yourname.com with no coding</td><td>Path 2 — No-code hosting platform</td></tr>
+          <tr><td>Need online payments or user logins</td><td>Path 3 — Developer handoff</td></tr>
+          <tr><td>Want to keep editing by chatting with AI</td><td>Path 2 — most support AI-assisted edits</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="checklist">
+      <h2>Pre-launch checklist</h2>
+      <p>Before sharing your link widely, run through this list:</p>
+      <ul class="checklist">
+        <li><strong>Mobile check</strong> — open the link on your phone and scroll through the whole page</li>
+        <li><strong>Spelling & contact info</strong> — double-check your email, phone number, and business name are correct</li>
+        <li><strong>Links work</strong> — click every button and link to confirm they go where intended</li>
+        <li><strong>Load test</strong> — ask a friend to open the link and tell you what they see first</li>
+        <li><strong>Clear next step</strong> — confirm a visitor knows exactly what to do (email you, book a call, follow a link)</li>
+      </ul>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Is publishing a website with Claude really free?</p>
+        <p class="faq-a">Yes. Publishing artifacts is available on the Free, Pro, and Max plans. You can build and publish a site without paying anything, though usage limits are lower on the free plan.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can I edit my site after it's published?</p>
+        <p class="faq-a">Yes. Go back to the same conversation, describe your changes, and the artifact updates. If you want the published link to reflect the new version, you'll need to publish that updated version again.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can other people copy or steal my website?</p>
+        <p class="faq-a">Anyone with a Claude account can "remix" a published artifact, which creates their own editable copy for their own use — this doesn't take your live link away from you or affect your published version. If you're publishing sensitive business content, be mindful that the design itself is viewable by anyone with the link.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Do I need to know HTML to use Claude for websites?</p>
+        <p class="faq-a">No. You describe what you want in plain English. Claude writes the underlying code (HTML, CSS, and sometimes JavaScript) without you ever needing to see or understand it, unless you choose to look at the Code tab out of curiosity.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What can't Claude-built websites do?</p>
+        <p class="faq-a">Artifacts run in a self-contained preview and aren't designed to connect to a database or process real payments on their own. For a basic informational site, portfolio, or landing page, this won't matter. For an online store, membership site, or anything storing customer data long-term, you'll want to move to a proper hosting platform or work with a developer once your design is finalized.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <div class="cta-box">
+    <h2>Ready to build with the right AI stack?</h2>
+    <p>Read our full guide to the best AI tools for solo founders in 2026 — covering writing, automation, and customer support beyond just your website.</p>
+    <a href="#" class="cta-btn">Read the full guide →</a>
+  </div>
+
+</div>
+</body>
+</html>

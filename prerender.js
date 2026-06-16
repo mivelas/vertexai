@@ -29,6 +29,16 @@ const blogPosts = [
     category: 'AI Tools Comparison',
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
     content: `<div class="post-content-html"><h1>ChatGPT vs Claude for Solo Founders in 2026: Which One Actually Saves You More Time?</h1><p>ChatGPT vs Claude head-to-head for solo founders in 2026 — writing, coding, pricing, and which one you should pay for based on your actual workflow.</p></div>`
+  },
+  {
+    slug: 'build-website-claude-no-code-2026',
+    title: 'How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)',
+    excerpt: 'A step-by-step guide for non-technical people to design, build, and publish a real website using Claude — from your first prompt to a live, shareable link.',
+    author: 'Nexalist Editorial',
+    datePublished: '2026-06-16',
+    category: 'No-Code Guide',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    content: `<div class="post-content-html"><h1>How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)</h1><p>No coding background. No developer. No budget for an agency. Just a clear idea and Claude — here's the full path from blank page to live website.</p></div>`
   }
 ];
 

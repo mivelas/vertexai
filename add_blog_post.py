@@ -1,6 +1,6 @@
 import re
 
-html_path = "/mnt/c/Github/vertexai/public/chatgpt-vs-claude-solo-founders-2026.html"
+html_path = "/mnt/c/Github/vertexai/public/build-website-claude-no-code-2026.html"
 ts_path = "/mnt/c/Github/vertexai/src/data/blogPosts.ts"
 
 with open(html_path, 'r', encoding='utf-8') as f:
@@ -16,16 +16,16 @@ content_html = content_html.replace('`', '\\`').replace('$', '\\$')
 
 new_post = f"""  }},
   {{
-    id: '2',
-    slug: 'chatgpt-vs-claude-solo-founders-2026',
-    title: 'ChatGPT vs Claude for Solo Founders in 2026: Which One Actually Saves You More Time?',
-    excerpt: 'ChatGPT vs Claude head-to-head for solo founders in 2026 — writing, coding, pricing, and which one you should pay for based on your actual workflow.',
+    id: '3',
+    slug: 'build-website-claude-no-code-2026',
+    title: 'How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)',
+    excerpt: 'A step-by-step guide for non-technical people to design, build, and publish a real website using Claude — from your first prompt to a live, shareable link.',
     author: 'Nexalist Editorial',
     date: 'June 2026',
-    datePublished: '2026-06-11',
-    category: 'AI Tools Comparison',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
+    datePublished: '2026-06-16',
+    category: 'No-Code Guide',
+    readTime: '14 min read',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
     content: `
 {content_html}
     `

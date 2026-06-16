@@ -730,5 +730,290 @@ export const blogPosts: BlogPost[] = [
 
   </article>
     `
+    },
+  {
+    id: '3',
+    slug: 'build-website-claude-no-code-2026',
+    title: 'How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)',
+    excerpt: 'A step-by-step guide for non-technical people to design, build, and publish a real website using Claude — from your first prompt to a live, shareable link.',
+    author: 'Nexalist Editorial',
+    date: 'June 2026',
+    datePublished: '2026-06-16',
+    category: 'No-Code Guide',
+    readTime: '14 min read',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    content: `
+<nav class="toc">
+    <p class="toc-title">In this guide</p>
+    <ol>
+      <li><a href="#why">Why Claude works for non-coders</a></li>
+      <li><a href="#prep">Before you start: 3 things to prepare</a></li>
+      <li><a href="#building">Step-by-step: building your website in Claude</a></li>
+      <li><a href="#preview">Previewing and editing your site</a></li>
+      <li><a href="#publish">Publishing your site for free with Claude</a></li>
+      <li><a href="#domain">Getting your own domain name (yourname.com)</a></li>
+      <li><a href="#paths">3 paths to a production-ready website</a></li>
+      <li><a href="#checklist">Pre-launch checklist</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <article class="prose">
+
+    <p class="lead">You don't need to learn to code to have a real website in 2026. You need to know how to describe what you want clearly — Claude handles the rest.</p>
+
+    <p>This guide walks through the entire process: turning an idea into a working website inside Claude, previewing and refining it, publishing it with a free shareable link, and — if you want it on your own domain — moving it to a real hosting platform. No jargon assumed. No prior experience needed.</p>
+
+    <section id="why">
+      <div class="cat-header">
+        <span class="cat-num">00</span>
+        <span class="cat-label">Why this works</span>
+      </div>
+      <h2>Why Claude works for non-coders</h2>
+
+      <p>Claude has a feature called <strong>Artifacts</strong> — when you ask it to build something like a website, it generates the actual code and shows you a live preview right next to the chat. You can see your site rendering in real time, and you don't need to understand a single line of the code behind it.</p>
+
+      <p>The part that matters most for non-technical people: you make changes by simply <strong>talking to Claude</strong>. "Make the heading bigger," "change the background to a soft blue," "add a contact form at the bottom" — you type it in plain English, and the website updates in front of you.</p>
+
+      <div class="callout callout-info">
+        <p class="callout-title">What you can build this way</p>
+        <p>Landing pages, portfolios, small business sites, personal sites, event pages, simple booking pages, newsletter signup pages, and basic multi-page sites. For anything needing user accounts, payments, or a database (like an online store with inventory), you'll eventually want a developer or a platform built for that — more on this in the "3 paths" section below.</p>
+      </div>
+    </section>
+
+    <section id="prep">
+      <div class="cat-header">
+        <span class="cat-num">01</span>
+        <span class="cat-label">Preparation</span>
+      </div>
+      <h2>Before you start: 3 things to prepare</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Know your website's one job</p>
+          <p class="step-text">Every good website has one primary goal: get an email signup, book a call, sell a product, show a portfolio. Decide this before you open Claude — it shapes everything else and gives Claude a clear target.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Gather your content first</p>
+          <p class="step-text">Have your business name, a short description of what you do, your contact info, and any text you want on the page ready in a notes file. Claude can write placeholder copy, but real content makes the result far more usable on day one.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Collect 2–3 reference sites you like</p>
+          <p class="step-text">You don't need design vocabulary. Just find a couple of websites whose look you like and describe what you like about them ("clean and minimal like this," "bold and colorful like that"). Claude can work from comparisons even without seeing the image directly — or you can paste a screenshot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="building">
+      <div class="cat-header">
+        <span class="cat-num">02</span>
+        <span class="cat-label">Building</span>
+      </div>
+      <h2>Step-by-step: building your website in Claude</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Open a new chat and describe your website</p>
+          <p class="step-text">Be specific about purpose, audience, and tone. The more detail you give upfront, the less back-and-forth editing you'll need later.</p>
+          <div class="prompt-box">
+            <span class="prompt-label">Example prompt</span>
+            Build me a one-page website for my freelance photography business. It should have: a hero section with my name "Maria Torres Photography" and tagline "Capturing real moments, naturally," a section showing 3 types of photography I offer (weddings, portraits, events), a short "about me" section, and a contact section with my email. Style: warm, minimal, earthy tones, elegant serif headings.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Let Claude generate the first version</p>
+          <p class="step-text">Claude will write the code and open a preview panel showing your website rendering live. This first version won't be perfect — treat it as a draft to react to, not a final product.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Refine it through conversation, one change at a time</p>
+          <p class="step-text">Reply in the same chat to make edits. The same website updates in place — you don't need to start over or copy anything.</p>
+          <div class="prompt-box">
+            <span class="prompt-label">Example follow-up prompts</span>
+            "Make the hero section taller and center the text vertically"<br>
+            "Change the color palette to terracotta and cream"<br>
+            "Add a fourth section with 3 client testimonials"<br>
+            "Make the contact button more prominent"
+          </div>
+          <p class="step-text">Make one or two changes per message rather than a long list — it's easier to review what changed and catch anything you don't like.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <p class="step-title">Check how it looks on mobile</p>
+          <p class="step-text">Most visitors will see your site on a phone first. Ask Claude directly: "make sure this looks good on mobile screens" — it will adjust the layout for smaller screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview">
+      <div class="cat-header">
+        <span class="cat-num">03</span>
+        <span class="cat-label">Reviewing</span>
+      </div>
+      <h2>Previewing and editing your site</h2>
+
+      <p>The artifact panel has two views: a <strong>Preview</strong> tab that shows your site exactly as a visitor would see it, and a <strong>Code</strong> tab that shows the underlying code. As a non-technical builder, you'll live almost entirely in Preview — the Code tab is there if you ever want a developer to take over later.</p>
+
+      <div class="callout">
+        <p class="callout-title">Pro tip</p>
+        <p>Every version of your site is saved as you iterate. If a change makes things worse, just tell Claude "undo that last change" or describe what you want reverted — you don't need to worry about losing earlier work.</p>
+      </div>
+    </section>
+
+    <section id="publish">
+      <div class="cat-header">
+        <span class="cat-num">04</span>
+        <span class="cat-label">Going live</span>
+      </div>
+      <h2>Publishing your site for free with Claude</h2>
+
+      <p>Once you're happy with how it looks, publishing takes one click — and it's available on every Claude plan, including the free plan.</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <p class="step-title">Click "Publish" on the artifact</p>
+          <p class="step-text">You'll find the Publish button at the top of the artifact panel. Click it to make your site publicly accessible.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <p class="step-title">Copy your public link</p>
+          <p class="step-text">Claude generates a shareable URL. Anyone with the link can view and interact with your site — they don't need a Claude account to see it.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <p class="step-title">Share it anywhere</p>
+          <p class="step-text">Put the link in your Instagram bio, send it to clients, post it on social media. If you want it embedded inside another website you already have, click "Get embed code" after publishing and add your website's domain to the allowed list.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <p class="callout-title">Good to know</p>
+        <p>A published Claude link works great for sharing and gathering feedback, but it lives on a claude.ai address rather than your own domain, and it isn't built for things like storing customer orders. If you want a permanent business website with your own domain name, continue to the next section.</p>
+      </div>
+    </section>
+
+    <section id="domain">
+      <div class="cat-header">
+        <span class="cat-num">05</span>
+        <span class="cat-label">Your own domain</span>
+      </div>
+      <h2>Getting your own domain name (yourname.com)</h2>
+
+      <p>If you want visitors to reach your site at a custom address like "mariaphotography.com" instead of a claude.ai link, you'll move your finished design onto a hosting platform. The good news: you've already done the hard part — designing and writing the site. This step is just giving it a permanent home.</p>
+
+      <p>The simplest non-technical route: copy the code from Claude's Code tab and paste it into a beginner-friendly hosting platform built for exactly this handoff (several exist specifically for moving AI-generated sites live with a visual editor, no code required). You'll register your domain name there too, usually for \$10–20/year.</p>
+    </section>
+
+    <section id="paths">
+      <h2>3 paths to a production-ready website</h2>
+      <p>Which path makes sense depends on how technical you are and how complex your site needs to be.</p>
+
+      <div class="path-grid">
+        <div class="path-card path-1">
+          <p class="path-label">Path 1</p>
+          <p class="path-title">Stay on the published link</p>
+          <p class="path-desc">Best for: portfolios, quick landing pages, testing an idea. Free, instant, zero setup. No custom domain.</p>
+        </div>
+        <div class="path-card path-2">
+          <p class="path-label">Path 2</p>
+          <p class="path-title">Move to a no-code hosting platform</p>
+          <p class="path-desc">Best for: small business sites, anyone non-technical wanting a real domain. Import your Claude code, get a visual editor, custom domain, and SEO settings without touching code.</p>
+        </div>
+        <div class="path-card path-3">
+          <p class="path-label">Path 3</p>
+          <p class="path-title">Hand off to a developer</p>
+          <p class="path-desc">Best for: sites needing logins, payments, or a database. Give a developer your Claude code and design as the starting brief — saves them significant time.</p>
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Need</th><th>Best path</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Just want to share something today</td><td>Path 1 — Published Claude link</td></tr>
+          <tr><td>Want yourname.com with no coding</td><td>Path 2 — No-code hosting platform</td></tr>
+          <tr><td>Need online payments or user logins</td><td>Path 3 — Developer handoff</td></tr>
+          <tr><td>Want to keep editing by chatting with AI</td><td>Path 2 — most support AI-assisted edits</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="checklist">
+      <h2>Pre-launch checklist</h2>
+      <p>Before sharing your link widely, run through this list:</p>
+      <ul class="checklist">
+        <li><strong>Mobile check</strong> — open the link on your phone and scroll through the whole page</li>
+        <li><strong>Spelling & contact info</strong> — double-check your email, phone number, and business name are correct</li>
+        <li><strong>Links work</strong> — click every button and link to confirm they go where intended</li>
+        <li><strong>Load test</strong> — ask a friend to open the link and tell you what they see first</li>
+        <li><strong>Clear next step</strong> — confirm a visitor knows exactly what to do (email you, book a call, follow a link)</li>
+      </ul>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Is publishing a website with Claude really free?</p>
+        <p class="faq-a">Yes. Publishing artifacts is available on the Free, Pro, and Max plans. You can build and publish a site without paying anything, though usage limits are lower on the free plan.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can I edit my site after it's published?</p>
+        <p class="faq-a">Yes. Go back to the same conversation, describe your changes, and the artifact updates. If you want the published link to reflect the new version, you'll need to publish that updated version again.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can other people copy or steal my website?</p>
+        <p class="faq-a">Anyone with a Claude account can "remix" a published artifact, which creates their own editable copy for their own use — this doesn't take your live link away from you or affect your published version. If you're publishing sensitive business content, be mindful that the design itself is viewable by anyone with the link.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Do I need to know HTML to use Claude for websites?</p>
+        <p class="faq-a">No. You describe what you want in plain English. Claude writes the underlying code (HTML, CSS, and sometimes JavaScript) without you ever needing to see or understand it, unless you choose to look at the Code tab out of curiosity.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What can't Claude-built websites do?</p>
+        <p class="faq-a">Artifacts run in a self-contained preview and aren't designed to connect to a database or process real payments on their own. For a basic informational site, portfolio, or landing page, this won't matter. For an online store, membership site, or anything storing customer data long-term, you'll want to move to a proper hosting platform or work with a developer once your design is finalized.</p>
+      </div>
+    </section>
+
+  </article>
+
+  <div class="cta-box">
+    <h2>Ready to build with the right AI stack?</h2>
+    <p>Read our guide to the best AI tools for solo founders in 2026 — covering writing, automation, and customer support beyond just your website.</p>
+    <a href="/blog/best-ai-tools-solo-founders-2026" class="cta-btn">Read the full guide →</a>
+  </div>
+    `
   }
 ];
