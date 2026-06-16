@@ -20,6 +20,15 @@ const Contact = () => {
     const data = await response.json();
     if (data.success) {
       setResult("Form Submitted Successfully");
+      
+      // GA4 Event Tracking
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          'service_type': formData.get('service'),
+          'method': 'contact_form'
+        });
+      }
+
       event.target.reset();
     } else {
       setResult("Error");

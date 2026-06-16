@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Calculator, TrendingUp, DollarSign, Clock } from 'lucide-react';
 import './ROICalculator.css';
 
@@ -7,6 +7,21 @@ const ROICalculator: React.FC = () => {
   const [avgSalary, setAvgSalary] = useState<number>(80000);
   const [manualTaskTime, setManualTaskTime] = useState<number>(30);
   const [aiEfficiency, setAiEfficiency] = useState<number>(40);
+
+  // Track ROI calculation engagement
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (window.gtag) {
+        window.gtag('event', 'roi_calculated', {
+          'team_size': teamSize,
+          'avg_salary': avgSalary,
+          'potential_savings': results.annualSavings
+        });
+      }
+    }, 2000); // Debounce for 2 seconds to capture final slider position
+
+    return () => clearTimeout(timer);
+  }, [teamSize, avgSalary, manualTaskTime, aiEfficiency]);
 
   const results = useMemo(() => {
     const totalManualCost = teamSize * avgSalary * (manualTaskTime / 100);
