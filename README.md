@@ -83,3 +83,66 @@ The project follows a modular, component-based structure:
 - Use the `lucide-react` library for consistent iconography.
 - Default icon size for section headers: `40`.
 - Default icon size for benefit cards: `32`.
+
+## ✍️ Blog Publication Process
+
+Follow these steps to add and publish a new blog post:
+
+### 1. Create HTML Content
+Create a standalone HTML file in the `public/` directory (e.g., `public/my-new-post.html`). The content of this post must use semantic tags, specifically starting with `<nav class="toc">` and ending with `</article>`.
+
+### 2. Configure and Run the Import Script
+Open `add_blog_post.py` and update the metadata inside the script:
+* **`html_path`**: Absolute path to your new HTML file.
+* **`id`**: Next sequential ID string (e.g., `'4'`).
+* **`slug`**: URL-friendly slug matching your post.
+* **`title`**: Full title of the blog post.
+* **`excerpt`**: Short summary of the post (usually from the meta description).
+* **`datePublished`**: Date formatted as `YYYY-MM-DD`.
+* **`category`**: Category tag.
+* **`readTime`**: Estimated reading time (e.g., `'10 min read'`).
+* **`image`**: An Unsplash or absolute image URL for the thumbnail.
+
+Execute the python script to append it to `src/data/blogPosts.ts`:
+```bash
+python3 add_blog_post.py
+```
+
+### 3. Register with the Pre-renderer
+Open `prerender.js` and add your new post metadata to the `blogPosts` array:
+```javascript
+{
+  slug: 'my-new-post',
+  title: 'Post Title',
+  excerpt: 'Short description.',
+  author: 'Nexalist Editorial',
+  datePublished: '2026-06-22',
+  category: 'Category',
+  image: 'Cover image URL',
+  content: `<div class="post-content-html"><h1>Post Title</h1><p>Short description.</p></div>`
+}
+```
+
+### 4. Update the Sitemap
+Open `public/sitemap.xml` and insert a new `<url>` block for your post:
+```xml
+<url>
+  <loc>https://nexalistai.com/blog/my-new-post</loc>
+  <lastmod>YYYY-MM-DD</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  <image:image>
+    <image:loc>https://images.unsplash.com/photo-...</image:loc>
+    <image:title>Post Title</image:title>
+  </image:image>
+</url>
+```
+*Note: Make sure to XML-escape characters like `&` as `&amp;` in the image URL.* Also, update the `<lastmod>` date for the homepage and listing pages to the current date.
+
+### 5. Build and Verify
+Run the production build:
+```bash
+npm run build
+```
+This compile process runs `vite build`, copies the sitemap, and executes `prerender.js` to output static pages in `dist/blog/[slug]/index.html` for SEO optimization.
+
