@@ -39,6 +39,16 @@ const blogPosts = [
     category: 'No-Code Guide',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
     content: `<div class="post-content-html"><h1>How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)</h1><p>No coding background. No developer. No budget for an agency. Just a clear idea and Claude — here's the full path from blank page to live website.</p></div>`
+  },
+  {
+    slug: 'create-the-professional-email-with-ai',
+    title: 'How to Write a Professional Email Using AI — Even If You Hate Writing (2026 Guide)',
+    excerpt: 'A practical guide for non-writers and solo founders on using AI to write better professional emails — faster, with the right tone, and without staring at a blank screen.',
+    author: 'Nexalist Editorial',
+    datePublished: '2026-06-22',
+    category: 'AI Writing Guide',
+    image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800',
+    content: `<div class="post-content-html"><h1>How to Write a Professional Email Using AI — Even If You Hate Writing (2026 Guide)</h1><p>A practical guide for non-writers and solo founders on using AI to write better professional emails — faster, with the right tone, and without staring at a blank screen.</p></div>`
   }
 ];
 

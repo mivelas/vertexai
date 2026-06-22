@@ -1,6 +1,6 @@
 import re
 
-html_path = "/mnt/c/Github/vertexai/public/build-website-claude-no-code-2026.html"
+html_path = "/mnt/c/Github/vertexai/public/create-the-professional-email-with-ai.html"
 ts_path = "/mnt/c/Github/vertexai/src/data/blogPosts.ts"
 
 with open(html_path, 'r', encoding='utf-8') as f:
@@ -16,16 +16,16 @@ content_html = content_html.replace('`', '\\`').replace('$', '\\$')
 
 new_post = f"""  }},
   {{
-    id: '3',
-    slug: 'build-website-claude-no-code-2026',
-    title: 'How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)',
-    excerpt: 'A step-by-step guide for non-technical people to design, build, and publish a real website using Claude — from your first prompt to a live, shareable link.',
+    id: '4',
+    slug: 'create-the-professional-email-with-ai',
+    title: 'How to Write a Professional Email Using AI — Even If You Hate Writing (2026 Guide)',
+    excerpt: 'A practical guide for non-writers and solo founders on using AI to write better professional emails — faster, with the right tone, and without staring at a blank screen.',
     author: 'Nexalist Editorial',
     date: 'June 2026',
-    datePublished: '2026-06-16',
-    category: 'No-Code Guide',
-    readTime: '14 min read',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    datePublished: '2026-06-22',
+    category: 'AI Writing Guide',
+    readTime: '11 min read',
+    image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=800',
     content: `
 {content_html}
     `
@@ -42,3 +42,4 @@ with open(ts_path, 'w', encoding='utf-8') as f:
     f.write(ts_content)
 
 print("Blog post appended successfully.")
+

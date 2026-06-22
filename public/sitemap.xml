@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://nexalistai.com/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,25 +13,25 @@
   <!-- Landing page anchors -->
   <url>
     <loc>https://nexalistai.com/#benefits</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nexalistai.com/#services</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nexalistai.com/#roadmap</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nexalistai.com/#contact</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -39,7 +39,7 @@
   <!-- Blog listing page -->
   <url>
     <loc>https://nexalistai.com/blog</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -75,6 +75,17 @@
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;q=80&amp;w=800</image:loc>
       <image:title>How to Build and Publish a Website Using Claude — No Coding Required (2026 Guide)</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://nexalistai.com/blog/create-the-professional-email-with-ai</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&amp;fit=crop&amp;q=80&amp;w=800</image:loc>
+      <image:title>How to Write a Professional Email Using AI — Even If You Hate Writing (2026 Guide)</image:title>
     </image:image>
   </url>
 </urlset>
